@@ -10,7 +10,7 @@ if (file.exists("~/.Rprofile")) {
 # ---- hugo version -----------------------
 
 pkgs <- rownames(utils::installed.packages())
-if 'blogdown' %in% pkgs {
+if ('blogdown' %in% pkgs) {
   hugo_vn <- blogdown::hugo_version()
   options(blogdown.hugo.version = hugo_vn)
 }
