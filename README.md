@@ -34,5 +34,6 @@ Linking images to project locations:
 
 ```sh
 # s = symlink, r = relative paths, f = force
-ln -srf submodules/dots_blogdown/.Rprofile ./.Rprofile
+cd ~/path/to/site
+ln -s -f ./submodules/dots_blogdown/.Rprofile ./.Rprofile
 ```

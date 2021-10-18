@@ -9,6 +9,8 @@ if (file.exists("~/.Rprofile")) {
 
 # ---- hugo version -----------------------
 
+# ensure that env variable matches blogdown
+# by reading from blogdown directly
 pkgs <- rownames(utils::installed.packages())
 if ('blogdown' %in% pkgs) {
   hugo_vn <- blogdown::hugo_version()
