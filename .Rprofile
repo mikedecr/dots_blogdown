@@ -20,19 +20,19 @@ if ('blogdown' %in% pkgs) {
 
 # ---- blog workflow -----------------------
 
-# post directory
+# new post directory and extension
 options(blogdown.subdir = "post")
-
-# knitting Rmd files on save
-options(blogdown.knit.on_save = FALSE)
+options(blogdown.ext = ".Rmarkdown")
 
 # knit to markdown, theme handles the HTML
-options(blogdown.ext = ".Rmarkdown")
 options(blogdown.method = "markdown")
 
 # MATH: knit to markdown, theme handles mathjax implementation
 # https://github.com/rstudio/blogdown/issues/466
 options(blogdown.protect.math = TRUE)
+
+# knitting Rmd files on save
+options(blogdown.knit.on_save = FALSE)
 
 
 # ---- other site/page configs -----------------------
