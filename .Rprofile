@@ -13,7 +13,7 @@ if (file.exists("~/.Rprofile")) {
 # else pick some vintage
 pkgs <- rownames(utils::installed.packages())
 if ('blogdown' %in% pkgs) {
-    options(blogdown.hugo.version = blogdown::hugo_version() |> as.character()
+    options(blogdown.hugo.version = blogdown::hugo_version() |> as.character())
 } else {
     print('No Hugo version found, set options(blogdown.hugo.version = ...)')
 } 
