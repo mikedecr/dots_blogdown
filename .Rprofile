@@ -9,13 +9,15 @@ if (file.exists("~/.Rprofile")) {
 
 # ---- hugo version -----------------------
 
-# ensure that env variable matches blogdown
-# by reading from blogdown directly
-pkgs <- rownames(utils::installed.packages())
-if ('blogdown' %in% pkgs) {
-  hugo_vn <- blogdown::hugo_version()
-  options(blogdown.hugo.version = hugo_vn)
-}
+# Read hugo_version from blogdown to ensure the env variable matches.
+# Putting this in local() contains a blogdown error (why?)
+local({
+    pkgs <- rownames(utils::installed.packages())
+    if ('blogdown' %in% pkgs) {
+        hugo_vn <<- blogdown::hugo_version()
+    }
+})
+options(blogdown.hugo.version = hugo_vn)
 
 
 # ---- blog workflow -----------------------
