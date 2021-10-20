@@ -10,30 +10,19 @@ Thus, they have their own module for website projects to import.
 
 ## Setup
 
-For some other `site` folder...
-
-```sh
-cd path/to/site
-```
-
-Adding the module to project:
+From `path/to/site`:
 
 ```sh
 mkdir submodules
 cd submodules
-git submodule add <remote url>
-```
-
-Ensuring updated content:
-
-```sh
+git submodule add git@github.com:mikedecr/dots_blogdown.git
 git submodule update --init --recursive
 ```
 
 Linking images to project locations:
 
 ```sh
-# s = symlink, r = relative paths, f = force
+# s = symlink, f = force
 cd ~/path/to/site
 ln -s -f ./submodules/dots_blogdown/.Rprofile ./.Rprofile
 ```
