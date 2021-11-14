@@ -1,3 +1,7 @@
+source("renv/activate.R")
+# ^^ automatically added by {renv}
+# activates the site's project renv
+
 # global variables that control blogdown behavior
 # https://bookdown.org/yihui/blogdown/global-options.html
 
