@@ -32,8 +32,8 @@ options(blogdown.ext = ".Rmarkdown")
 # knit to markdown, theme handles the HTML
 options(blogdown.method = "markdown")
 
-# MATH: knit to markdown, theme handles mathjax implementation
-# https://github.com/rstudio/blogdown/issues/466
+# MATH: knit to .markdown, theme renders math separately 
+# (see https://github.com/rstudio/blogdown/issues/466)
 options(blogdown.protect.math = TRUE)
 
 # knitting Rmd files on save
